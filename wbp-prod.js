@@ -1,27 +1,24 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const autoprefixer = require("autoprefixer")({ browsers: ["> 1%", "last 2 versions"], });
 
 const p = {
     dist: path.resolve(__dirname, "dist"),
     src: path.resolve(__dirname, "src"),
 };
-
 module.exports = {
     entry: "./src/index.jsx",
     output: {
-        filename: "bundle.js",
+        filename: "bundle.[chunkhash].js",
         path: p.dist,
         publicPath: "/",
     },
-    devtool: "source-map",
-    mode: "development",
-    watch: true,
-    watchOptions: { ignored: /node_modules/, },
+    devtool: false,
+    mode: "production",
+    watch: false,
     module: {
         rules: [
             {
@@ -46,8 +43,8 @@ module.exports = {
         ],
     },
     plugins: [
-        new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: ["*.*.*", ], }),
-        new MiniCssExtractPlugin({ filename: "style.css", }),
+        new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: ["*.*", "!static", "!index.html", ], }),
+        new MiniCssExtractPlugin({ filename: "style.[chunkhash].css", }),
         new HtmlWebPackPlugin({
             template: "./src/index.html",
             filename: "./index.html",

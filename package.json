@@ -7,9 +7,8 @@
     "scripts": {
         "start": "node ./backend/index.js",
         "server": "nodemon ./backend/index.js",
-        "dev": "set NODE_ENV=development&&nodemon --config ./nodemon-wp.json --exec webpack",
-        "build": "set NODE_ENV=production&&webpack",
-        "heroku-postbuild": "echo skip heroku-postbuild"
+        "dev": "nodemon --config ./nodemon-wp.json --exec webpack",
+        "build": "webpack --config ./wbp-prod.js"
     },
     "dependencies": {
         "axios": "^0.18.0",
