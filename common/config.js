@@ -8,4 +8,4 @@ module.exports = {
     IS_DEV,
     PORT,
     requestUri,
-}
+};
