@@ -1,0 +1,74 @@
+{
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "globals": {
+        "PropTypes": true,
+        "React": true,
+        "styled": true
+    },
+    "rules": {
+        "array-bracket-spacing": 0,
+        "camelcase": 0,
+        "prefer-destructuring": 0,
+        "no-case-declarations": 0,
+        "react/destructuring-assignment": "never",
+        "jsx-a11y/no-autofocus": 0,
+        "jsx-a11y/label-has-for": 0,
+        "jsx-a11y/label-has-associated-control": 0,
+        "react/jsx-filename-extension": 0,
+        "react/jsx-indent": 4,
+        "react/jsx-indent-props": 4,
+        "prefer-template": 0,
+        "indent": [
+            "error",
+            4
+        ],
+        "object-curly-newline": [
+            "error",
+            {
+                "ObjectExpression": {
+                    "multiline": true,
+                    "minProperties": 3
+                },
+                "ObjectPattern": {
+                    "multiline": true
+                },
+                "ImportDeclaration": "never",
+                "ExportDeclaration": {
+                    "multiline": true,
+                    "minProperties": 3
+                }
+            }
+        ],
+        "no-use-before-define": 0,
+        "no-underscore-dangle": 0,
+        "func-names": 0,
+        "space-before-function-paren": 0,
+        "no-console": "off",
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "always",
+                "objects": "always",
+                "imports": "never",
+                "exports": "never",
+                "functions": "ignore"
+            }
+        ],
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/no-static-element-interactions": 0,
+        "react/jsx-one-expression-per-line": 0
+    }
+}

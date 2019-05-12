@@ -1,0 +1,47 @@
+{
+    "name": "perfect",
+    "version": "1.0.0",
+    "main": "./dist/index.html",
+    "author": "apexof",
+    "license": "MIT",
+    "scripts": {
+        "start": "node ./backend/index.js",
+        "server": "nodemon ./backend/index.js",
+        "dev": "set NODE_ENV=development&&nodemon --config ./nodemon-wp.json --exec webpack",
+        "build": "set NODE_ENV=production&&webpack",
+        "heroku-postbuild": "echo skip heroku-postbuild"
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "express": "^4.16.4",
+        "prop-types": "^15.7.2",
+        "react": "^16.8.6",
+        "livereload": "^0.7.0",
+        "react-dom": "^16.8.6"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.4.4",
+        "@babel/core": "^7.4.4",
+        "@babel/plugin-proposal-class-properties": "^7.4.4",
+        "@babel/preset-env": "^7.4.4",
+        "@babel/preset-react": "^7.0.0",
+        "babel-eslint": "^10.0.1",
+        "babel-loader": "^8.0.5",
+        "babel-plugin-react-css-modules": "^5.2.6",
+        "clean-webpack-plugin": "^2.0.2",
+        "css-loader": "^2.1.1",
+        "eslint": "^5.16.0",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-plugin-import": "^2.17.2",
+        "eslint-plugin-jsx-a11y": "^6.2.1",
+        "eslint-plugin-react": "^7.13.0",
+        "html-webpack-plugin": "^3.2.0",
+        "mini-css-extract-plugin": "^0.6.0",
+        "node-sass": "^4.12.0",
+        "postcss-scss": "^2.0.0",
+        "sass-loader": "^7.1.0",
+        "webpack": "^4.31.0",
+        "webpack-clean-obsolete-chunks": "^0.4.0",
+        "webpack-cli": "^3.3.2"
+    }
+}

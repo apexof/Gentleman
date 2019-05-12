@@ -1,0 +1,9 @@
+{
+    "watch": [
+        "./webpack.config.js",
+        "./nodemon-wp.json"
+    ],
+    "execMap": {
+        "webpack": "./node_modules/.bin/webpack"
+    }
+}
