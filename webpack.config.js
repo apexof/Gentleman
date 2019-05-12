@@ -4,8 +4,6 @@ const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
-// const autoprefixer = require("autoprefixer")({ browsers: ["> 1%", "last 2 versions"], });
-
 const p = {
     dist: path.resolve(__dirname, "dist"),
     src: path.resolve(__dirname, "src"),
