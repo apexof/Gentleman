@@ -1,5 +1,6 @@
 # Gentleman
-Webpack React Starter. 
+
+### `Webpack React Starter`
 ### `Starter включает:`
 
 Раздельные конфиги webpack для dev и prod 
